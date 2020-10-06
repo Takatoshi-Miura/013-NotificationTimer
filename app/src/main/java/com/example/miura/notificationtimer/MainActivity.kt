@@ -1,5 +1,6 @@
 package com.example.miura.notificationtimer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -31,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         // サウンドボタンの処理
         soundButton.setOnClickListener{
             Log.d("TAG", "サウンドボタンが押されました")
+
+            // 音声設定画面へ遷移
+            val intent = Intent(this@MainActivity,SoundSettingActivity::class.java)
+            startActivity(intent)
         }
 
         // スタートボタンの処理
